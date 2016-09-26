@@ -23,6 +23,10 @@
         <table border="1">
             <thead>
                 <tr>
+                    <th>Nome</th>
+                    <th>Cpf</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
                     <th>Renda</th>
                     <th>Local de Trabalho</th>
                     <th>Telefone de Trabalho</th>
@@ -37,6 +41,10 @@
                   for(Locatario e:locatarioDAO.getLista()){
                %>   
               <tr>
+                  <td><%=e.getNome() %></td>
+                  <td><%=e.getCpf() %></td>
+                  <td><%=e.getEmail()%></td>
+                  <td><%=e.getTelefone() %></td>
                   <td><%=e.getRenda() %></td>
                   <td><%=e.getLocalTrabalho() %></td>
                   <td><%=e.getTelefoneTrabalho() %></td>

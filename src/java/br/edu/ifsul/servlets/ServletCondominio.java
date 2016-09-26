@@ -71,7 +71,14 @@ public class ServletCondominio extends HttpServlet {
             }catch(Exception e){
                 System.out.println("Erro ao converter id");
             }
-        Condominio obj = new Condominio();
+            Condominio obj = null;
+            if (id == null)
+                    {
+                        obj = new Condominio();
+                    }else{
+                obj = dao.getObjetoSelecionado();
+            }
+        
         obj.setId(id);
         obj.setNome(request.getParameter("nome"));
         obj.setEndereco(request.getParameter("endereco"));

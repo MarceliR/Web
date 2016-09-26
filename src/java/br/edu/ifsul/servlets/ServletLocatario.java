@@ -72,6 +72,12 @@ public class ServletLocatario extends HttpServlet {
                 System.out.println("Erro ao converter id");
             }
         Locatario obj = new Locatario();
+//            if (id == null)
+//                    {
+//                        obj = new Locatario();
+//                    }else{
+//                obj = dao.getObjetoSelecionado();
+//            }
         obj.setId(id);
         obj.setNome(request.getParameter("nome"));
         obj.setCpf(request.getParameter("cpf"));

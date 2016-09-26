@@ -55,7 +55,9 @@ public class LocatarioDAO implements Serializable {
     public boolean salvar (Locatario obj){
         try{
             em.getTransaction().begin();
+            //System.out.println(obj);
             if (obj.getId() == null){
+                
                 em.persist(obj);
                 
             }else{

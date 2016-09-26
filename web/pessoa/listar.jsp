@@ -26,8 +26,8 @@
                     <th>ID</th>
                     <th>Nome</th>
                     <th>CPF</th>
-                    <th>Telefone</th>
                     <th>Email</th>
+                    <th>Telefone</th>
                     <th>Alterar</th>
                     <th>Excluir</th>
                 </tr>

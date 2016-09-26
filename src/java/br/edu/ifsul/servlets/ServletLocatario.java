@@ -74,12 +74,12 @@ public class ServletLocatario extends HttpServlet {
         Locatario obj = new Locatario();
         obj.setId(id);
         obj.setNome(request.getParameter("nome"));
-        obj.setCpf("015.422.666-90");
-        obj.setEmail("aline@gmail.com");
-        obj.setTelefone("99447788");
-        obj.setLocalTrabalho("escritorio");
-        obj.setTelefoneTrabalho("33117899");
-        obj.setRenda(8.000);
+        obj.setCpf(request.getParameter("cpf"));
+        obj.setEmail(request.getParameter("email"));
+        obj.setTelefone(request.getParameter("telefone"));
+        obj.setLocalTrabalho(request.getParameter("localtrabalho"));
+        obj.setTelefoneTrabalho(request.getParameter("telefonetrabalho"));
+        obj.setRenda(Double.parseDouble(request.getParameter("renda")));
         dao.setObjetoSelecionado(obj);
         if (dao.validaObjeto(obj)){
             dao.salvar(obj);

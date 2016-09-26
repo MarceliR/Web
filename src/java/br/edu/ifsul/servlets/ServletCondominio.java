@@ -74,9 +74,9 @@ public class ServletCondominio extends HttpServlet {
         Condominio obj = new Condominio();
         obj.setId(id);
         obj.setNome(request.getParameter("nome"));
-        obj.setEndereco("rua a");
-        obj.setNumero("12");
-        obj.setCep("99000343");
+        obj.setEndereco(request.getParameter("endereco"));
+        obj.setNumero(request.getParameter("numero"));
+        obj.setCep(request.getParameter("cep"));
         dao.setObjetoSelecionado(obj);
         if (dao.validaObjeto(obj)){
             dao.salvar(obj);

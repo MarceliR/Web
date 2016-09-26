@@ -74,9 +74,9 @@ public class ServletPessoa extends HttpServlet {
         Pessoa obj = new Pessoa();
         obj.setId(id);
         obj.setNome(request.getParameter("nome"));
-        obj.setCpf("015.422.666-90");
-        obj.setEmail("aline@gmail.com");
-        obj.setTelefone("99447788");
+        obj.setCpf(request.getParameter("cpf"));
+        obj.setEmail(request.getParameter("email"));
+        obj.setTelefone(request.getParameter("telefone"));
         dao.setObjetoSelecionado(obj);
         if (dao.validaObjeto(obj)){
             dao.salvar(obj);

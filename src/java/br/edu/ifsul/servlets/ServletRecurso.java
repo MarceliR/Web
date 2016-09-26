@@ -73,7 +73,7 @@ public class ServletRecurso extends HttpServlet {
             }
         Recurso obj = new Recurso();
         obj.setId(id);
-        obj.setDescricao("jdfjsl");
+        obj.setDescricao(request.getParameter("descricao"));
         dao.setObjetoSelecionado(obj);
         if (dao.validaObjeto(obj)){
             dao.salvar(obj);
